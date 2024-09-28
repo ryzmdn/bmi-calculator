@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BMI Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main class="card">
+      <div class="card-heading">
+        <h3 class="card-title">BMI Calculator</h3>
+        <p class="card-subtitle">
+          Enter your weight and height in the input to determine your BMI status.
+        </p>
+      </div>
+      <div class="card-body">
+        <section class="input-container">
+          <div>
+            <div class="fieldset-inner">
+              <div>
+                <label for="weight">Weight</label>
+                <div class="input-box">
+                  <input type="number" name="weight" id="weight" min="1" minlength="1" maxlength="3" autocomplete="off" spellcheck="false" required>
+                  <div class="icon-box">
+                    <span class="centimeter">cm</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label for="height">Height</label>
+                <div class="input-box">
+                  <input type="number" name="height" id="height" min="1" minlength="1" maxlength="3" autocomplete="off" spellcheck="false" required>
+                  <div class="icon-box">
+                    <span class="centimeter">cm</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <button type="button" onclick="calculateBMI()" class="calculate-button">Calculate BMI</button>
+
+        <div class="divider">
+          <div class="divider-inner">
+            <div class="divider-line"></div>
+          </div>
+          <div class="divider-text-inner">
+            <span class="divider-text">Output</span>
+          </div>
+        </div>
+
+        <section class="result-container">
+          <div class="result-container-inner">
+            <div class="card-inner card-inner-1">
+              <h4>BMI</h4>
+              <div class="card-inner-content">
+                <p id="status-value"></p>
+              </div>
+            </div>
+            <div class="card-inner card-inner-2">
+              <h4>Status</h4>
+              <div class="card-inner-content">
+                <p id="status-text"></p>
+              </div>
+            </div>
+            <div class="card-inner card-inner-3">
+              <h4>Advice</h4>
+              <div class="card-inner-content">
+                <p id="advice-text"></p>
+              </div>
+            </div>
+            <div class="card-inner card-inner-4">
+              <canvas id="bmiChart"></canvas>
+            </div> 
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
