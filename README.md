@@ -24,7 +24,7 @@ Clone this repository using the steps below.
 
 ```bash
   # Clone repository
-  git clone https://github.com/riizkyyrmdnn/bmi-calculator.git
+  git clone https://github.com/ryzmdn/bmi-calculator.git
 
   # Change directory folder
   cd bmi-calculator
